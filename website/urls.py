@@ -1,12 +1,11 @@
-from django.conf.urls import url, include
+from django.urls import path, include, re_path
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^music/', include('music.urls')),
+    path('admin/', admin.site.urls),
+    path('music/', include('music.urls')),
 ]
 
 if settings.DEBUG:
